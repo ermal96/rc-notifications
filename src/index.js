@@ -1,21 +1,15 @@
-import "./index.scss";
+import "./index.css";
 
 // create dom element
 const dom = document.createElement("div");
 
-// append .react-notification to dom
-(function () {
+function Notification() {
   dom.classList.add("react-notification");
   window.onload = () => document.querySelector("body").appendChild(dom);
-})();
-
-// define class
-class Notification {}
-
+}
 Notification.prototype.show = function (
   content,
   duration = 3000,
-  theme = "light",
   method = "info",
   onClose = Function.prototype
 ) {
@@ -32,7 +26,6 @@ Notification.prototype.show = function (
 
   // add contentbox classes
   contentBox.classList.add("react-content-box");
-  contentBox.classList.add(theme);
   contentBox.classList.add(method);
   contentBox.classList.add("animate-in");
 
@@ -69,8 +62,8 @@ Notification.prototype.show = function (
 
 // API
 ["success", "error", "warn", "info"].forEach((method) => {
-  Notification.prototype[method] = function (content, duration, theme, onClose) {
-    this.show(content, duration, theme, method, onClose);
+  Notification.prototype[method] = function (content, duration, onClose) {
+    this.show(content, duration, method, onClose);
   };
 });
 
