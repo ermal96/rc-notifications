@@ -1,6 +1,6 @@
 {
   "name": "rc-notifications",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Ermal Vrapi",
   "description": "Handle different notifications in a elegant way",
   "repository": "ermal96/rc-notifications",
