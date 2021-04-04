@@ -1,12 +1,13 @@
 {
   "name": "rc-notifications",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "author": "Ermal Vrapi",
   "description": "Handle different notifications in a elegant way",
   "repository": "ermal96/rc-notifications",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist & babel src -d dist & node-sass  src/index.scss -o dist"
+    "build": "rm -rf dist & babel src -d dist & node-sass  src/index.scss -o dist",
+    "publish": "npm run build & npm publish"
   },
   "keywords": [
     "webpack",
@@ -20,6 +21,7 @@
     "@babel/cli": "^7.13.14",
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
+    "babel-minify": "^0.5.1",
     "node-sass": "^5.0.0"
   }
 }

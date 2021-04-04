@@ -7,6 +7,7 @@ function Notification() {
   dom.classList.add("react-notification");
   window.onload = () => document.querySelector("body").appendChild(dom);
 }
+
 Notification.prototype.show = function (
   content,
   duration = 3000,
